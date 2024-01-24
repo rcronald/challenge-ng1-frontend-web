@@ -1,0 +1,19 @@
+---
+version: 1.0
+configuration:
+  has_webserver: true
+  readonly_paths:
+    - src/app/app.component.spec.ts
+    - src/app/calculator/calculator.component.spec.ts
+  scoring:
+    command: "npm test"
+    files:
+      - unit.xml
+  ide_config:
+    default_open_files:
+      - src/app/calculator/calculator.component.html
+      - src/app/calculator/calculator.component.ts
+    project_menu:
+      run: npm start
+      install: npm install
+      test: npm test
